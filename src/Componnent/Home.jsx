@@ -23,7 +23,7 @@ const Home = () => {
       />
 
       <section ref={homeRef} className="h-screen flex flex-col justify-center items-center bg-gradient-to-r from-purple-500 to-pink-500 text-white">
-        <h1 className="text-5xl font-bold">Hi, I’m Asif 👋</h1>
+        <h1 className="text-5xl font-bold">Hi, I’m Asifur Rahman👋</h1>
         <p className="mt-4 text-xl">A passionate Developer | Python & Django Enthusiast</p>
       </section>
 
