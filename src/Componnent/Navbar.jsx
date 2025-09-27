@@ -7,6 +7,15 @@ export default function Navbar({ handleHome, handleAbout, handleProjects, handle
         <li onClick={handleProjects} className="hover:text-yellow-400">Projects</li>
         <li onClick={handleSkills} className="hover:text-yellow-400">Skills</li>
         <li onClick={handleContact} className="hover:text-yellow-400">Contact</li>
+        <li>
+          <a 
+            href="/resume.pdf" 
+            download="Asif_Resume.pdf" 
+            className="hover:text-yellow-400"
+          >
+            Resume
+          </a>
+        </li>
       </ul>
     </nav>
   );
