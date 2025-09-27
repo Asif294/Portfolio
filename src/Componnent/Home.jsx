@@ -1,6 +1,5 @@
 import { useRef } from "react";
 import Navbar from "./Navbar";
-import About from "./About";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import Contact from "./Contact";
@@ -10,18 +9,18 @@ import { SiCodeforces, SiLeetcode } from "react-icons/si";
 
 const Home = () => {
   const homeRef = useRef(null);
-  const aboutRef = useRef(null);
-  const projectsRef = useRef(null);
+  
   const skillsRef = useRef(null);
+  const projectsRef = useRef(null);
   const contactRef = useRef(null);
 
   return (
     <div>
       <Navbar
         handleHome={() => homeRef.current?.scrollIntoView({ behavior: "smooth" })}
-        handleAbout={() => aboutRef.current?.scrollIntoView({ behavior: "smooth" })}
-        handleProjects={() => projectsRef.current?.scrollIntoView({ behavior: "smooth" })}
         handleSkills={() => skillsRef.current?.scrollIntoView({ behavior: "smooth" })}
+        handleProjects={() => projectsRef.current?.scrollIntoView({ behavior: "smooth" })}
+        
         handleContact={() => contactRef.current?.scrollIntoView({ behavior: "smooth" })}
       />
 
@@ -34,37 +33,78 @@ const Home = () => {
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
           
           {/* Left Side */}
-          <div className="flex-1 text-center md:text-left md:pl-16"> 
+          <div className="flex-1 text-center md:text-left md:pl-16">
             <h1 className="text-5xl font-bold leading-tight">
               Hi, I’m <span className="text-yellow-400">Asifur Rahman</span> 👋
             </h1>
             <h3 className="text-2xl md:text-3xl font-semibold mt-4 text-gray-300">
               Django | DRF | React | Tailwind
             </h3>
-            <p className="mt-4 text-lg max-w-md text-gray-400">
+            <p className="mt-4 font-bold text-lg max-w-md text-gray-300">
               A passionate Backend Developer, Python & Django enthusiast who loves to
               solve problems and build scalable web applications.
             </p>
 
             {/* Social Icons */}
-            <div className="flex justify-center md:justify-start space-x-6 mt-6 text-2xl">
-              <a href="https://codeforces.com/profile/your_username" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">
+            <div className="flex justify-center md:justify-start space-x-6 mt-6 text-2xl text-gray-300">
+              <a
+                href="https://codeforces.com/profile/asifur_rahman677"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-yellow-400"
+              >
                 <SiCodeforces />
               </a>
-              <a href="https://leetcode.com/your_username" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">
+              <a
+                href="https://leetcode.com/u/Asif294/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-yellow-400"
+              >
                 <SiLeetcode />
               </a>
-              <a href="https://linkedin.com/in/your_username" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">
+              <a
+                href="https://www.linkedin.com/in/asifur-rahman-435b2a200/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-yellow-400"
+              >
                 <FaLinkedin />
               </a>
-              <a href="https://github.com/your_username" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">
+              <a
+                href="https://github.com/Asif294"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-yellow-400"
+              >
                 <FaGithub />
               </a>
-              <a href="https://wa.me/your_number" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400">
+              <a
+                href="https://wa.me/8801885430525"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-yellow-400"
+              >
                 <FaWhatsapp />
               </a>
-              <a href="mailto:your_email@gmail.com" className="hover:text-yellow-400">
+              <a
+                href="mailto:asifurrahman677294@gmail.com"
+                className="hover:text-yellow-400"
+              >
                 <FaEnvelope />
+              </a>
+            </div>
+
+            {/* Resume Button */}
+            <div className="flex justify-center md:justify-start mt-8">
+              <a
+                href="/resume.pdf" // এখানে তোমার CV এর path দাও (e.g. public/resume.pdf)
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-yellow-400 text-black font-bold px-6 py-2 rounded-md 
+                           shadow-md hover:bg-yellow-500 transition duration-300"
+              >
+                📄 Resume
               </a>
             </div>
           </div>
@@ -81,9 +121,10 @@ const Home = () => {
       </section>
 
       {/* Other Sections */}
-      <About ref={aboutRef} />
-      <Projects ref={projectsRef} />
+      
+      
       <Skills ref={skillsRef} />
+      <Projects ref={projectsRef} />
       <Contact ref={contactRef} />
     </div>
   );
