@@ -6,7 +6,7 @@ const Skills = forwardRef((props, ref) => {
     { title: "Frontend", skills: "HTML | CSS | Bootstrap | Tailwindcss | React" },
     { title: "Backend", skills: "Django | Django REST Framework | MySQL | Django ORM" },
     { title: "Auth", skills: "Token | OAuth | JWT" },
-    { title: "Others", skills: "Git | Github | Vercel | Supabase | Postman" },
+    { title: "Others", skills: "Git  | Github  | Vercel  | Supabase  | Postman" },
   ];
 
   const proficient = [
@@ -28,8 +28,8 @@ const Skills = forwardRef((props, ref) => {
 
         {skillCategories.map((cat, i) => (
           <div key={i} className="mb-4">
-            <h3 className="font-semibold text-lg text-white">{cat.title}:</h3>
-            <p className="text-gray-300">{cat.skills}</p>
+            <h3 className="font-bold text-2xl  text-white">{cat.title}:</h3>
+            <p className="text-gray-300 text-xl font-samibold">{cat.skills}</p>
           </div>
         ))}
 
@@ -44,9 +44,9 @@ const Skills = forwardRef((props, ref) => {
       {/* Right Side */}
       <div className="md:w-3/6 flex justify-center mt-8 md:mt-0">
         <img
-          src="/skills-image.png" // তোমার image path
+          src="/public/skills.png" 
           alt="Skills Illustration"
-          className="w-80 h-80 md:w-90 md:h-90 object-cover rounded-lg shadow-lg border-2 border-yellow-400"
+          className="w-80 h-90 md:w-90 md:h-90 object-cover "
         />
       </div>
     </section>
