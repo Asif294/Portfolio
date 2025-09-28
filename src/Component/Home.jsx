@@ -3,7 +3,7 @@ import Navbar from "./Navbar";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import Contact from "./Contact";
- import Footer from "./footer";
+import Footer from "./Footer";
 import Education from "./Education";
 // import Experience from "./Experience";
 

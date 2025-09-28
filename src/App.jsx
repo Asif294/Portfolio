@@ -2,10 +2,10 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import Projects from "./Component/Projects";
-import Home from "./Component/home";
+import Home from "./Component/Home";
 import Skills from "./Component/Skills";
 import Contact from "./Component/Contact";
-import Footer from "./Component/footer";
+import Footer from "./Component/Footer";
 import Education from "./Component/Education";
 import Experience from "./Component/Experience";
 
