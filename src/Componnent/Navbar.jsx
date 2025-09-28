@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export default function Navbar({ handleHome, handleSkills, handleProjects, handleContact }) {
+export default function Navbar({ handleHome, handleSkills,handleEducation, handleProjects, handleContact }) {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -30,6 +30,9 @@ export default function Navbar({ handleHome, handleSkills, handleProjects, handl
         </li>
         <li onClick={handleProjects} className="font-semibold text-gray-200 hover:text-yellow-400 transition">
           Projects
+        </li>
+        <li onClick={handleEducation} className="font-semibold text-gray-200 hover:text-yellow-400 transition">
+          Education
         </li>
         <li onClick={handleContact} className="font-semibold text-gray-200 hover:text-yellow-400 transition">
           Contact

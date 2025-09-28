@@ -3,6 +3,8 @@ import Navbar from "./Navbar";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import Contact from "./Contact";
+ import Footer from "./footer";
+import Education from "./Education";
 // React Icons
 import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import { SiCodeforces, SiLeetcode } from "react-icons/si";
@@ -12,7 +14,10 @@ const Home = () => {
   
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
+  const educationRef = useRef(null);
   const contactRef = useRef(null);
+  const footerRef = useRef(null);
+  
 
   return (
     <div>
@@ -20,8 +25,10 @@ const Home = () => {
         handleHome={() => homeRef.current?.scrollIntoView({ behavior: "smooth" })}
         handleSkills={() => skillsRef.current?.scrollIntoView({ behavior: "smooth" })}
         handleProjects={() => projectsRef.current?.scrollIntoView({ behavior: "smooth" })}
+        handleEducation={() => educationRef.current?.scrollIntoView({ behavior: "smooth" })}
         
         handleContact={() => contactRef.current?.scrollIntoView({ behavior: "smooth" })}
+        
       />
 
       {/* Hero Section */}
@@ -125,7 +132,9 @@ const Home = () => {
       
       <Skills ref={skillsRef} />
       <Projects ref={projectsRef} />
+      <Education ref={educationRef}/>
       <Contact ref={contactRef} />
+      <Footer ref={footerRef}/>
     </div>
   );
 };

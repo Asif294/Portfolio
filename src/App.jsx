@@ -5,6 +5,10 @@ import Projects from "./Componnent/Projects";
 import Home from "./Componnent/home";
 import Skills from "./Componnent/Skills";
 import Contact from "./Componnent/Contact";
+import Footer from "./Componnent/footer";
+import Education from "./Componnent/Education";
+
+
 
 export const router = createBrowserRouter([
   {
@@ -20,8 +24,16 @@ export const router = createBrowserRouter([
     element: <Projects></Projects>
   },
   {
+    path: "/education",
+    element: <Education></Education>
+  },
+  {
     path: "/contact",
     element: <Contact></Contact>
   },
+  {
+    path:"/footer",
+    element:<Footer></Footer>
+  }
  
 ]);

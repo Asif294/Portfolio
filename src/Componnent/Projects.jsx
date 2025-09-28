@@ -5,17 +5,20 @@ const Projects = forwardRef((props, ref) => {
     { 
       title: "Bank Management System", 
       desc: "A Django project handling transactions.", 
-      img: "/public/bank.webp" 
+      img: "/public/bank.webp",
+      link: "https://github.com/Asif294/Banking_system"
     },
     { 
       title: "Hospital Management System", 
-      desc: "Create account ,Take Appoinment ,Recived pascription ,show available doctor", 
-      img: "/public/hospital-management-system.webp" 
+      desc: "Create account, Take Appointment, Receive prescription, show available doctors.", 
+      img: "/public/hospital-management-system.webp",
+      link: "https://github.com/Asif294/SmartCare"
     },
     { 
       title: "Cloth Store", 
       desc: "An e-commerce project with cart, wishlist, and filters.", 
-      img: "/public/stylehub.png" 
+      img: "/public/stylehub.png",
+      link: "https://github.com/Asif294/Stylehub-backend"
     },
   ];
 
@@ -42,7 +45,19 @@ const Projects = forwardRef((props, ref) => {
             <h3 className="text-2xl font-semibold mb-2 text-yellow-300 text-center">
               {p.title}
             </h3>
-            <p className="text-gray-300 text-center">{p.desc}</p>
+            <p className="text-gray-300 text-center mb-4">{p.desc}</p>
+            
+            {/* Button with link */}
+            <div className="text-center">
+              <a
+                href={p.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-4 py-2 bg-yellow-400 text-black font-semibold rounded-lg hover:bg-yellow-500 transition"
+              >
+                View Backend
+              </a>
+            </div>
           </div>
         ))}
       </div>

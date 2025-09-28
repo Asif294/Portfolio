@@ -4,7 +4,7 @@ const Skills = forwardRef((props, ref) => {
   const skillCategories = [
     { title: "Languages", skills: "C | C++ | Python | JavaScript | SQL" },
     { title: "Frontend", skills: "HTML | CSS | Bootstrap | Tailwindcss | React" },
-    { title: "Backend", skills: "Django | Django REST Framework | MySQL | Django ORM" },
+    { title: "Backend", skills: "Django | Django REST Framework | MySQL | postgresql " },
     { title: "Auth", skills: "Token | OAuth | JWT" },
     { title: "Others", skills: "Git  | Github  | Vercel  | Supabase  | Postman" },
   ];
