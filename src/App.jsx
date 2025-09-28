@@ -1,13 +1,13 @@
 
 import { createBrowserRouter } from "react-router-dom";
 
-import Projects from "./Componnent/Projects";
-import Home from "./Componnent/home";
-import Skills from "./Componnent/Skills";
-import Contact from "./Componnent/Contact";
-import Footer from "./Componnent/footer";
-import Education from "./Componnent/Education";
-import Experience from "./Componnent/Experience";
+import Projects from "./Component/Projects";
+import Home from "./Component/home";
+import Skills from "./Component/Skills";
+import Contact from "./Component/Contact";
+import Footer from "./Component/footer";
+import Education from "./Component/Education";
+import Experience from "./Component/Experience";
 
 
 
