@@ -13,6 +13,14 @@ export default function Navbar({ handleHome, handleSkills, handleEducation, hand
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const menuItems = [
+    { label: "Home", action: handleHome },
+    { label: "Skills", action: handleSkills },
+    { label: "Projects", action: handleProjects },
+    { label: "Education", action: handleEducation },
+    { label: "Contact", action: handleContact },
+  ];
+
   return (
     <nav
       className={`fixed w-full top-0 z-50 transition-all duration-300 ${
@@ -31,13 +39,7 @@ export default function Navbar({ handleHome, handleSkills, handleEducation, hand
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-8 text-lg font-medium">
-          {[
-            { label: "Home", action: handleHome },
-            { label: "Skills", action: handleSkills },
-            { label: "Projects", action: handleProjects },
-            { label: "Education", action: handleEducation },
-            { label: "Contact", action: handleContact },
-          ].map((item, idx) => (
+          {menuItems.map((item, idx) => (
             <li
               key={idx}
               onClick={item.action}
@@ -61,48 +63,44 @@ export default function Navbar({ handleHome, handleSkills, handleEducation, hand
         </ul>
 
         {/* Mobile Hamburger */}
-        <div className="md:hidden text-2xl cursor-pointer text-gray-200" onClick={() => setMenuOpen(!menuOpen)}>
+        <div 
+          className="md:hidden text-2xl cursor-pointer text-gray-200 z-50" 
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
           {menuOpen ? <FaTimes /> : <FaBars />}
         </div>
       </div>
 
       {/* Mobile Full-Screen Menu */}
-      <div
-        className={`fixed top-0 left-0 w-full h-full bg-gray-900/95 backdrop-blur-md flex flex-col 
-                    justify-center items-center space-y-8 text-2xl font-semibold 
-                    transform transition-transform duration-500 ${
-                      menuOpen ? "translate-x-0" : "-translate-x-full"
-                    }`}
-      >
-        {[
-          { label: "Home", action: handleHome },
-          { label: "Skills", action: handleSkills },
-          { label: "Projects", action: handleProjects },
-          { label: "Education", action: handleEducation },
-          { label: "Contact", action: handleContact },
-        ].map((item, idx) => (
-          <span
-            key={idx}
-            onClick={() => {
-              item.action();
-              setMenuOpen(false);
-            }}
-            className="text-gray-200 hover:text-yellow-400 transition duration-300"
-          >
-            {item.label}
-          </span>
-        ))}
-
-        <a 
-          href="/resume.pdf" 
-          download="Asif_Resume.pdf" 
-          className="px-6 py-2 border-2 border-yellow-400 text-yellow-400 rounded-full font-semibold 
-                    hover:bg-yellow-400 hover:text-black transition duration-300 shadow-md"
-          onClick={() => setMenuOpen(false)}
+      {menuOpen && (
+        <div 
+          className="fixed inset-0 h-screen w-screen bg-gray-900/95 backdrop-blur-md flex flex-col 
+                     justify-center items-center space-y-8 text-2xl font-semibold z-40 overflow-y-auto"
         >
-          Resume
-        </a>
-      </div>
+          {menuItems.map((item, idx) => (
+            <span
+              key={idx}
+              onClick={() => {
+                item.action();
+                setMenuOpen(false);
+              }}
+              className="text-gray-200 hover:text-yellow-400 transition duration-300"
+            >
+              {item.label}
+            </span>
+          ))}
+
+          <a 
+            href="/resume.pdf" 
+            download="Asif_Resume.pdf" 
+            className="px-6 py-2 border-2 border-yellow-400 text-yellow-400 rounded-full font-semibold 
+                      hover:bg-yellow-400 hover:text-black transition duration-300 shadow-md"
+            onClick={() => setMenuOpen(false)}
+          >
+            Resume
+          </a>
+        </div>
+      )}
     </nav>
   );
 }
