@@ -113,7 +113,7 @@ const Home = () => {
             {/* Resume Button */}
             <div className="flex justify-center md:justify-start mt-8">
               <a
-                href="/resume.pdf" // এখানে তোমার CV এর path দাও (e.g. public/resume.pdf)
+                href="/resume.pdf" 
                 download="Asif_Resume.pdf" 
                 rel="noopener noreferrer"
                 className="bg-yellow-400 text-black font-bold px-6 py-2 rounded-md 
@@ -127,7 +127,7 @@ const Home = () => {
           {/* Right Side */}
           <div className="flex-1 flex justify-center mt-8 md:mt-0">
             <img
-              src="/public/profile.jpeg"
+              src="/profile.jpeg"
               alt="Asifur Rahman"
               className="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-lg border-4 border-yellow-400"
             />

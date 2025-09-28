@@ -5,19 +5,19 @@ const Projects = forwardRef((props, ref) => {
     { 
       title: "Bank Management System", 
       desc: "A Django project handling transactions.", 
-      img: "/public/bank.webp",
+      img: "/bank.webp",
       link: "https://github.com/Asif294/Banking_system"
     },
     { 
       title: "Hospital Management System", 
       desc: "Create account, Take Appointment, Receive prescription, show available doctors.", 
-      img: "/public/hospital-management-system.webp",
+      img: "/hospital-management-system.webp",
       link: "https://github.com/Asif294/SmartCare"
     },
     { 
       title: "Cloth Store", 
       desc: "An e-commerce project with cart, wishlist, and filters.", 
-      img: "/public/stylehub.png",
+      img: "/stylehub.png",
       link: "https://github.com/Asif294/Stylehub-backend"
     },
   ];

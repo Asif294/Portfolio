@@ -44,7 +44,7 @@ const Skills = forwardRef((props, ref) => {
       {/* Right Side */}
       <div className="md:w-3/6 flex justify-center mt-8 md:mt-0">
         <img
-          src="/public/skills.png" 
+          src="/skills.png" 
           alt="Skills Illustration"
           className="w-80 h-90 md:w-90 md:h-90 object-cover "
         />
