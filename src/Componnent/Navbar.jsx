@@ -28,6 +28,9 @@ export default function Navbar({ handleHome, handleSkills,handleEducation, handl
         <li onClick={handleSkills} className="font-semibold text-gray-200 hover:text-yellow-400 transition">
           Skills
         </li>
+         {/* <li onClick={handleExperience} className="font-semibold text-gray-200 hover:text-yellow-400 transition">
+    Experience
+  </li> */}
         <li onClick={handleProjects} className="font-semibold text-gray-200 hover:text-yellow-400 transition">
           Projects
         </li>

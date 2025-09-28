@@ -7,6 +7,7 @@ import Skills from "./Componnent/Skills";
 import Contact from "./Componnent/Contact";
 import Footer from "./Componnent/footer";
 import Education from "./Componnent/Education";
+import Experience from "./Componnent/Experience";
 
 
 
@@ -19,6 +20,10 @@ export const router = createBrowserRouter([
     path: "/skills",
     element: <Skills></Skills>
   },
+  //  {
+  //   path: "/experince",
+  //   element: <Experience></Experience>
+  // },
   {
     path: "/projects",
     element: <Projects></Projects>
