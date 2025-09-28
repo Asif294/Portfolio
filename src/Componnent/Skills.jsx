@@ -2,7 +2,7 @@ import { forwardRef } from "react";
 
 const Skills = forwardRef((props, ref) => {
   const skillCategories = [
-    { title: "Languages", skills: "C | C++ | Python | JavaScript" },
+    { title: "Languages", skills: "C | C++ | Python | JavaScript | SQL" },
     { title: "Frontend", skills: "HTML | CSS | Bootstrap | Tailwindcss | React" },
     { title: "Backend", skills: "Django | Django REST Framework | MySQL | Django ORM" },
     { title: "Auth", skills: "Token | OAuth | JWT" },
