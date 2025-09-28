@@ -127,7 +127,7 @@ const Home = () => {
           {/* Right Side */}
           <div className="flex-1 flex justify-center mt-8 md:mt-0">
             <img
-              src="/profile.jpeg"
+              src="/public/profile.jpeg"
               alt="Asifur Rahman"
               className="w-64 h-64 md:w-80 md:h-80 rounded-full shadow-lg border-4 border-yellow-400"
             />
