@@ -42,7 +42,8 @@ const Home = () => {
       <section
         ref={homeRef}
         className="h-screen flex flex-col justify-center items-center 
-                   bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white"
+             bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white
+             pt-20" 
       >
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
           
