@@ -1,56 +1,108 @@
 import { useState, useEffect } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 
-export default function Navbar({ handleHome, handleSkills,handleEducation, handleProjects, handleContact }) {
+export default function Navbar({ handleHome, handleSkills, handleEducation, handleProjects, handleContact }) {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 50) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 50);
     };
     window.addEventListener("scroll", handleScroll);
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
     <nav
-      className={`fixed w-full top-0 z-50 bg-gray-900 text-white shadow-md transition-all duration-300 
-                  ${scrolled ? "py-2" : "py-4"}`}
+      className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+        scrolled ? "bg-gray-900/95 backdrop-blur-md py-2 shadow-lg" : "bg-transparent py-4"
+      }`}
     >
-      <ul className="flex flex-wrap justify-center md:justify-center space-x-6 cursor-pointer">
-        <li onClick={handleHome} className="font-semibold text-gray-200 hover:text-yellow-400 transition">
-          Home
-        </li>
-        <li onClick={handleSkills} className="font-semibold text-gray-200 hover:text-yellow-400 transition">
-          Skills
-        </li>
-         {/* <li onClick={handleExperience} className="font-semibold text-gray-200 hover:text-yellow-400 transition">
-    Experience
-  </li> */}
-        <li onClick={handleProjects} className="font-semibold text-gray-200 hover:text-yellow-400 transition">
-          Projects
-        </li>
-        <li onClick={handleEducation} className="font-semibold text-gray-200 hover:text-yellow-400 transition">
-          Education
-        </li>
-        <li onClick={handleContact} className="font-semibold text-gray-200 hover:text-yellow-400 transition">
-          Contact
-        </li>
-        <li>
-          <a 
-            href="/resume.pdf" 
-            download="Asif_Resume.pdf" 
-            className="font-semibold px-4 py-1 border border-yellow-400 rounded-md text-yellow-400 
-                       hover:bg-yellow-400 hover:text-black transition duration-200"
+      <div className="container mx-auto flex justify-between items-center px-6 md:px-12">
+        
+        {/* Logo */}
+        <div 
+          onClick={handleHome} 
+          className="text-2xl font-extrabold cursor-pointer bg-gradient-to-r from-yellow-400 to-orange-500 bg-clip-text text-transparent"
+        >
+          Asifur Rahman
+        </div>
+
+        {/* Desktop Menu */}
+        <ul className="hidden md:flex space-x-8 text-lg font-medium">
+          {[
+            { label: "Home", action: handleHome },
+            { label: "Skills", action: handleSkills },
+            { label: "Projects", action: handleProjects },
+            { label: "Education", action: handleEducation },
+            { label: "Contact", action: handleContact },
+          ].map((item, idx) => (
+            <li
+              key={idx}
+              onClick={item.action}
+              className="relative cursor-pointer text-gray-200 hover:text-yellow-400 transition duration-200 group"
+            >
+              {item.label}
+              <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-yellow-400 transition-all duration-300 group-hover:w-full"></span>
+            </li>
+          ))}
+
+          <li>
+            <a 
+              href="/resume.pdf" 
+              download="Asif_Resume.pdf" 
+              className="px-4 py-2 border-2 border-yellow-400 text-yellow-400 rounded-full font-semibold 
+                        hover:bg-yellow-400 hover:text-black transition duration-300 shadow-md"
+            >
+              Resume
+            </a>
+          </li>
+        </ul>
+
+        {/* Mobile Hamburger */}
+        <div className="md:hidden text-2xl cursor-pointer text-gray-200" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </div>
+      </div>
+
+      {/* Mobile Full-Screen Menu */}
+      <div
+        className={`fixed top-0 left-0 w-full h-full bg-gray-900/95 backdrop-blur-md flex flex-col 
+                    justify-center items-center space-y-8 text-2xl font-semibold 
+                    transform transition-transform duration-500 ${
+                      menuOpen ? "translate-x-0" : "-translate-x-full"
+                    }`}
+      >
+        {[
+          { label: "Home", action: handleHome },
+          { label: "Skills", action: handleSkills },
+          { label: "Projects", action: handleProjects },
+          { label: "Education", action: handleEducation },
+          { label: "Contact", action: handleContact },
+        ].map((item, idx) => (
+          <span
+            key={idx}
+            onClick={() => {
+              item.action();
+              setMenuOpen(false);
+            }}
+            className="text-gray-200 hover:text-yellow-400 transition duration-300"
           >
-            Resume
-          </a>
-        </li>
-      </ul>
+            {item.label}
+          </span>
+        ))}
+
+        <a 
+          href="/resume.pdf" 
+          download="Asif_Resume.pdf" 
+          className="px-6 py-2 border-2 border-yellow-400 text-yellow-400 rounded-full font-semibold 
+                    hover:bg-yellow-400 hover:text-black transition duration-300 shadow-md"
+          onClick={() => setMenuOpen(false)}
+        >
+          Resume
+        </a>
+      </div>
     </nav>
   );
 }

@@ -42,8 +42,8 @@ const Home = () => {
       <section
         ref={homeRef}
         className="h-screen flex flex-col justify-center items-center 
-             bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white
-             pt-20" 
+       bg-gradient-to-br from-gray-900 via-gray-800 to-black text-white
+       pt-24 md:pt-30"
       >
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
           
@@ -61,7 +61,7 @@ const Home = () => {
             </p>
 
             {/* Social Icons */}
-            <div className="flex justify-center gap-3 md:justify-start space-x-6 mt-8 text-3xl text-gray-300">
+            <div className="flex justify-center gap-2.5 md:justify-start space-x-6 mt-8 text-3xl text-gray-300">
               <a
                 href="https://codeforces.com/profile/asifur_rahman677"
                 target="_blank"
