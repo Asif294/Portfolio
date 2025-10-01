@@ -9,7 +9,7 @@ const Footer = () => {
           Asif's Portfolio
         </h3>
         <p className="text-gray-400 mb-6 text-center">
-          “Turning ideas into reality with code 🚀”
+          “ Turning ideas into reality with code ”
         </p>
 
         {/* Social Links */}

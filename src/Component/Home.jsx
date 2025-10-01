@@ -111,7 +111,7 @@ const Home = () => {
             </div>
 
             {/* Resume Button */}
-            <div className="flex justify-center md:justify-start mt-8">
+            <div className="flex justify-center md:justify-start mt-10">
               <a
                 href="/resume.pdf" 
                 download="Asif_Resume.pdf" 
