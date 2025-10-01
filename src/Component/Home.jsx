@@ -113,7 +113,7 @@ const Home = () => {
             {/* Resume Button */}
             <div className="flex justify-center md:justify-start mt-10">
               <a
-                href="/resume.pdf" 
+                href="/Asif.pdf" 
                 download="Asif_Resume.pdf" 
                 rel="noopener noreferrer"
                 className="bg-yellow-400 text-black font-bold px-6 py-2 rounded-md 

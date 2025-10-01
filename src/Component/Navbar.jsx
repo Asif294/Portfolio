@@ -52,7 +52,7 @@ export default function Navbar({ handleHome, handleSkills, handleEducation, hand
 
           <li>
             <a 
-              href="/resume.pdf" 
+              href="/Asif.pdf" 
               download="Asif_Resume.pdf" 
               className="px-4 py-2 border-2 border-yellow-400 text-yellow-400 rounded-full font-semibold 
                         hover:bg-yellow-400 hover:text-black transition duration-300 shadow-md"
@@ -91,7 +91,7 @@ export default function Navbar({ handleHome, handleSkills, handleEducation, hand
           ))}
 
           <a 
-            href="/resume.pdf" 
+            href="/public/Asif.pdf" 
             download="Asif_Resume.pdf" 
             className="px-6 py-2 border-2 border-yellow-400 text-yellow-400 rounded-full font-semibold 
                       hover:bg-yellow-400 hover:text-black transition duration-300 shadow-md"
