@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 
-export default function Navbar({ handleHome, handleSkills, handleEducation, handleProjects, handleContact }) {
+export default function Navbar({ handleHome, handleSkills, handleEducation, handleProjects, handleContact, handleExperience }) {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
@@ -16,6 +16,7 @@ export default function Navbar({ handleHome, handleSkills, handleEducation, hand
   const menuItems = [
     { label: "Home", action: handleHome },
     { label: "Skills", action: handleSkills },
+    { label: "Experience", action: handleExperience },
     { label: "Projects", action: handleProjects },
     { label: "Education", action: handleEducation },
     { label: "Contact", action: handleContact },

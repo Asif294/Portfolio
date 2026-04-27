@@ -5,7 +5,7 @@ import Skills from "./Skills";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import Education from "./Education";
-// import Experience from "./Experience";
+import Experience from "./Experience";
 
 
 // React Icons
@@ -17,7 +17,7 @@ const Home = () => {
   const homeRef = useRef(null);
   
   const skillsRef = useRef(null);
-  // const experienceRef = useRef(null);
+  const experienceRef = useRef(null);
   const projectsRef = useRef(null);
   const educationRef = useRef(null);
 
@@ -30,7 +30,7 @@ const Home = () => {
       <Navbar
         handleHome={() => homeRef.current?.scrollIntoView({ behavior: "smooth" })}
         handleSkills={() => skillsRef.current?.scrollIntoView({ behavior: "smooth" })}
-        // handleExperience={() => experienceRef.current?.scrollIntoView({ behavior: "smooth" })}
+        handleExperience={() => experienceRef.current?.scrollIntoView({ behavior: "smooth" })}
         handleProjects={() => projectsRef.current?.scrollIntoView({ behavior: "smooth" })}
         handleEducation={() => educationRef.current?.scrollIntoView({ behavior: "smooth" })}
         
@@ -139,7 +139,7 @@ const Home = () => {
       
       
       <Skills ref={skillsRef} />
-      {/* <Experience ref={experienceRef} /> */}
+      <Experience ref={experienceRef} />
       <Projects ref={projectsRef} />
       <Education ref={educationRef}/>
       <Contact ref={contactRef} />
