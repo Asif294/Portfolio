@@ -1,12 +1,59 @@
-# React + Vite
+# Asifur Rahman — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal portfolio website built with React and Tailwind CSS, showcasing my skills, experience, and projects as a Backend Developer.
 
-Currently, two official plugins are available:
+## Live Demo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> Deploy link here (e.g. Vercel / Netlify)
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Frontend:** React, Tailwind CSS, Vite
+- **Icons:** React Icons
+- **Routing:** React Router DOM
+
+## Features
+
+- Responsive design for all screen sizes
+- Smooth scroll navigation via Navbar
+- Sections: Home, Skills, Experience, Projects, Education, Contact
+- Downloadable Resume
+- Links to GitHub, LinkedIn, Codeforces, LeetCode
+
+## Sections
+
+| Section | Description |
+|---|---|
+| Home | Introduction, social links, resume download |
+| Skills | Tech stack categorized with badges |
+| Experience | Timeline of work experience |
+| Projects | Project cards with overview, tech stack, GitHub links |
+| Education | Academic background and certifications |
+| Contact | Contact form / details |
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Run development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## Projects Highlighted
+
+- **SmartCare** — Hospital Management System (Django, DRF, SQLite)
+- **StyleHub** — E-commerce Clothing Store Backend (Django, DRF, PostgreSQL)
+- **Banking System** — Bank Management System (Django, DRF, JWT)
+
+## Contact
+
+- GitHub: [Asif294](https://github.com/Asif294)
+- LinkedIn: [asifur-rahman](https://www.linkedin.com/in/asifur-rahman-435b2a200/)
+- Codeforces: [asifur_rahman677](https://codeforces.com/profile/asifur_rahman677)
+- LeetCode: [Asif294](https://leetcode.com/u/Asif294/)
+- Email: asifurrahman677294@gmail.com
