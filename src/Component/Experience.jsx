@@ -45,18 +45,18 @@ const Experience = forwardRef((_, ref) => {
               <div className="absolute left-1/2 transform -translate-x-1/2 top-6 w-4 h-4 rounded-full bg-yellow-400 border-4 border-gray-900 z-10 hidden md:block" />
 
               {/* Card */}
-              <div className={`w-full md:w-5/12 bg-gray-800 p-6 rounded-xl border border-gray-700 hover:border-yellow-400 shadow-lg hover:shadow-yellow-400/10 transition duration-300 ${isLeft ? "md:mr-auto" : "md:ml-auto"}`}>
+              <div className={`w-full md:w-[46%] bg-gray-800 p-10 rounded-2xl border border-gray-700 hover:border-yellow-400 shadow-xl hover:shadow-yellow-400/10 transition duration-300 ${isLeft ? "md:mr-auto" : "md:ml-auto"}`}>
                 {/* Top accent bar */}
-                <div className="w-10 h-1 bg-yellow-400 rounded mb-4" />
+                <div className="w-14 h-1.5 bg-yellow-400 rounded mb-6" />
 
-                <h3 className="text-xl font-bold text-white">{exp.position}</h3>
-                <p className="text-yellow-400 font-semibold text-sm mt-1">{exp.company}</p>
-                <p className="text-gray-500 text-xs italic mt-1 mb-4">{exp.duration}</p>
+                <h3 className="text-2xl font-bold text-white">{exp.position}</h3>
+                <p className="text-yellow-400 font-semibold text-base mt-2">{exp.company}</p>
+                <p className="text-gray-500 text-sm italic mt-1 mb-6">{exp.duration}</p>
 
-                <ul className="space-y-2">
+                <ul className="space-y-3">
                   {exp.points.map((point, i) => (
-                    <li key={i} className="flex items-start gap-2 text-gray-300 text-sm">
-                      <span className="text-yellow-400 mt-0.5">▹</span>
+                    <li key={i} className="flex items-start gap-3 text-gray-300 text-base leading-relaxed">
+                      <span className="text-yellow-400 mt-0.5 text-lg">▹</span>
                       {point}
                     </li>
                   ))}

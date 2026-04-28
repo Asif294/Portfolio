@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
 import Navbar from "./Navbar";
 import Projects from "./Projects";
 import Skills from "./Skills";
@@ -11,10 +11,18 @@ import Experience from "./Experience";
 // React Icons
 import { FaGithub, FaLinkedin, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import { SiCodeforces, SiLeetcode } from "react-icons/si";
+import { FaArrowUp } from "react-icons/fa";
 
 
 const Home = () => {
   const homeRef = useRef(null);
+  const [showTop, setShowTop] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => setShowTop(window.scrollY > 300);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   
   const skillsRef = useRef(null);
   const experienceRef = useRef(null);
@@ -144,6 +152,17 @@ const Home = () => {
       <Education ref={educationRef}/>
       <Contact ref={contactRef} />
       <Footer ref={footerRef}/>
+
+      {/* Scroll to Top Button */}
+      {showTop && (
+        <button
+          onClick={() => homeRef.current?.scrollIntoView({ behavior: "smooth" })}
+          className="fixed bottom-8 right-8 z-50 bg-yellow-400 text-black p-3 rounded-full shadow-lg hover:bg-yellow-500 transition duration-300"
+          aria-label="Scroll to top"
+        >
+          <FaArrowUp size={20} />
+        </button>
+      )}
     </div>
   );
 };
