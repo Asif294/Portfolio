@@ -1,44 +1,41 @@
+import Navbar from "./components/layout/Navbar";
+import Footer from "./components/layout/Footer";
+import ScrollToTop from "./components/layout/ScrollToTop";
 
-import { createBrowserRouter } from "react-router-dom";
+import Hero from "./components/sections/Hero";
+import About from "./components/sections/About";
+import Skills from "./components/sections/Skills";
+import Experience from "./components/sections/Experience";
+import Projects from "./components/sections/Projects";
+import Education from "./components/sections/Education";
+import Contact from "./components/sections/Contact";
 
-import Projects from "./Component/Projects";
-import Home from "./Component/Home";
-import Skills from "./Component/Skills";
-import Contact from "./Component/Contact";
-import Footer from "./Component/Footer";
-import Education from "./Component/Education";
-import Experience from "./Component/Experience";
+export default function App() {
+  return (
+    <>
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60]
+                   focus:rounded-lg focus:bg-accent-400 focus:px-4 focus:py-2 focus:text-sm
+                   focus:font-semibold focus:text-ink-950"
+      >
+        Skip to content
+      </a>
 
+      <Navbar />
 
+      <main id="main">
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Projects />
+        <Education />
+        <Contact />
+      </main>
 
-export const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home></Home>,
-  },
-   {
-    path: "/skills",
-    element: <Skills></Skills>
-  },
-   {
-    path: "/experince",
-    element: <Experience></Experience>
-  },
-  {
-    path: "/projects",
-    element: <Projects></Projects>
-  },
-  {
-    path: "/education",
-    element: <Education></Education>
-  },
-  {
-    path: "/contact",
-    element: <Contact></Contact>
-  },
-  {
-    path:"/footer",
-    element:<Footer></Footer>
-  }
- 
-]);
+      <Footer />
+      <ScrollToTop />
+    </>
+  );
+}
