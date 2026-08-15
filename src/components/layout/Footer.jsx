@@ -9,13 +9,13 @@ export default function Footer() {
             <a href="#home" className="font-mono text-lg font-bold text-white">
               Asifur<span className="text-accent-400">.dev</span>
             </a>
-            <p className="mt-3 max-w-xs text-sm leading-relaxed text-slate-500">
+            <p className="mt-3 max-w-xs text-sm leading-relaxed text-slate-400">
               {profile.tagline} Backend engineering with Django, DRF and PostgreSQL.
             </p>
           </div>
 
           <nav aria-label="Footer">
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-300">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-200">
               Navigate
             </h3>
             <ul className="grid grid-cols-2 gap-2 text-sm">
@@ -23,7 +23,7 @@ export default function Footer() {
                 <li key={link.id}>
                   <a
                     href={`#${link.id}`}
-                    className="text-slate-500 transition-colors hover:text-accent-400"
+                    className="text-slate-400 transition-colors hover:text-accent-400"
                   >
                     {link.label}
                   </a>
@@ -33,7 +33,7 @@ export default function Footer() {
           </nav>
 
           <div>
-            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-300">
+            <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-slate-200">
               Elsewhere
             </h3>
             <div className="flex flex-wrap gap-3">
@@ -46,7 +46,7 @@ export default function Footer() {
                   aria-label={label}
                   title={label}
                   className="flex h-10 w-10 items-center justify-center rounded-full
-                             border border-ink-700 bg-ink-800 text-slate-400 transition
+                             border border-ink-700 bg-ink-800 text-slate-300 transition
                              duration-300 hover:border-accent-400 hover:text-accent-400"
                 >
                   <Icon />
@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-ink-800 pt-6 text-sm text-slate-600 sm:flex-row">
+        <div className="mt-12 flex flex-col items-center justify-between gap-3 border-t border-ink-800 pt-6 text-sm text-slate-500 sm:flex-row">
           <p>
             © {new Date().getFullYear()} {profile.name}. All rights reserved.
           </p>

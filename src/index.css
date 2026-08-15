@@ -4,13 +4,17 @@
 
 @layer base {
   html {
+    /* Tailwind sizes are rem-based, so nudging the root size scales every
+       font size and space on the page together, keeping the rhythm intact.
+       Breakpoints stay in px, so responsive behaviour is unaffected. */
+    font-size: 17.5px;
     scroll-behavior: smooth;
     /* Offset anchor jumps so the fixed navbar never covers a heading. */
     scroll-padding-top: 5rem;
   }
 
   body {
-    @apply bg-ink-950 text-slate-300 font-sans antialiased;
+    @apply bg-ink-950 text-slate-200 font-sans antialiased;
   }
 
   ::selection {

@@ -35,19 +35,19 @@ export default function Education() {
                           <FaGraduationCap className="text-accent-400" />
                           {item.institution}
                         </h3>
-                        <p className="mt-1 text-sm font-medium text-accent-400">
+                        <p className="mt-1 text-base font-medium text-accent-400">
                           {item.degree}
                         </p>
-                        <p className="mt-0.5 text-xs text-slate-500">
+                        <p className="mt-0.5 text-sm text-slate-300">
                           {item.location}
                         </p>
                       </div>
 
                       <span
-                        className={`shrink-0 rounded-full px-3 py-1 font-mono text-xs ${
+                        className={`shrink-0 rounded-full px-3 py-1 font-mono text-[13px] ${
                           item.current
                             ? "bg-accent-400/10 text-accent-300"
-                            : "bg-ink-700 text-slate-400"
+                            : "bg-ink-700 text-slate-300"
                         }`}
                       >
                         {item.period}
@@ -58,7 +58,7 @@ export default function Education() {
                       {item.points.map((point) => (
                         <li
                           key={point}
-                          className="flex items-start gap-2 text-sm text-slate-400"
+                          className="flex items-start gap-2 text-base text-slate-300"
                         >
                           <span className="mt-0.5 text-accent-400">▹</span>
                           {point}
@@ -75,7 +75,7 @@ export default function Education() {
         {/* Certifications */}
         <Reveal delay={200}>
           <Card className="h-full p-7">
-            <h3 className="mb-5 text-sm font-semibold uppercase tracking-wider text-slate-300">
+            <h3 className="mb-5 text-sm font-semibold uppercase tracking-wider text-slate-200">
               Certifications
             </h3>
 
@@ -85,10 +85,10 @@ export default function Education() {
                   <div className="flex items-start gap-3">
                     <FaCertificate className="mt-1 shrink-0 text-accent-400" />
                     <div>
-                      <p className="text-sm font-semibold text-slate-200">
+                      <p className="text-base font-semibold text-slate-100">
                         {certificate.title}
                       </p>
-                      <p className="mt-0.5 text-xs text-slate-500">
+                      <p className="mt-0.5 text-sm text-slate-300">
                         {certificate.issuer}
                       </p>
                       {certificate.href && (
@@ -96,7 +96,7 @@ export default function Education() {
                           href={certificate.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="mt-2 inline-flex items-center gap-1.5 text-xs font-semibold
+                          className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold
                                      text-accent-400 transition hover:text-accent-300"
                         >
                           View certificate

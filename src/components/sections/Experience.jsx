@@ -32,19 +32,19 @@ export default function Experience() {
                   <div className="flex flex-col gap-2 md:flex-row md:items-start md:justify-between">
                     <div>
                       <h3 className="text-xl font-bold text-white">{job.role}</h3>
-                      <p className="mt-1 text-sm font-semibold text-accent-400">
+                      <p className="mt-1 text-base font-semibold text-accent-400">
                         {job.company}
-                        <span className="ml-2 font-normal text-slate-500">
+                        <span className="ml-2 font-normal text-slate-400">
                           · {job.type}
                         </span>
                       </p>
                     </div>
 
                     <span
-                      className={`shrink-0 rounded-full px-3 py-1 font-mono text-xs ${
+                      className={`shrink-0 rounded-full px-3 py-1 font-mono text-[13px] ${
                         job.current
                           ? "bg-accent-400/10 text-accent-300"
-                          : "bg-ink-700 text-slate-400"
+                          : "bg-ink-700 text-slate-300"
                       }`}
                     >
                       {job.period}
@@ -55,7 +55,7 @@ export default function Experience() {
                     {job.points.map((point) => (
                       <li
                         key={point}
-                        className="flex items-start gap-3 text-sm leading-relaxed text-slate-400"
+                        className="flex items-start gap-3 text-base leading-relaxed text-slate-300"
                       >
                         <span className="mt-1 text-accent-400">▹</span>
                         {point}

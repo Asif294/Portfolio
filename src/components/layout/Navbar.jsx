@@ -53,7 +53,7 @@ export default function Navbar() {
                   className={`link-underline text-sm font-medium transition-colors duration-200 ${
                     active === link.id
                       ? "text-accent-400 after:w-full"
-                      : "text-slate-300 hover:text-accent-400"
+                      : "text-slate-200 hover:text-accent-400"
                   }`}
                 >
                   {link.label}
@@ -81,7 +81,7 @@ export default function Navbar() {
             aria-expanded={menuOpen}
             aria-controls="mobile-menu"
             aria-label="Open menu"
-            className="text-xl text-slate-200 md:hidden"
+            className="text-xl text-slate-100 md:hidden"
           >
             <FaBars />
           </button>
@@ -122,7 +122,7 @@ export default function Navbar() {
             type="button"
             onClick={() => setMenuOpen(false)}
             aria-label="Close menu"
-            className="text-lg text-slate-400 transition-colors hover:text-accent-400"
+            className="text-lg text-slate-300 transition-colors hover:text-accent-400"
           >
             <FaTimes />
           </button>
@@ -139,7 +139,7 @@ export default function Navbar() {
                   className={`block rounded-lg px-4 py-3 text-base font-medium transition-colors duration-200 ${
                     active === link.id
                       ? "border-l-2 border-accent-400 bg-accent-400/10 text-accent-400"
-                      : "text-slate-300 hover:bg-ink-800 hover:text-accent-400"
+                      : "text-slate-200 hover:bg-ink-800 hover:text-accent-400"
                   }`}
                 >
                   {link.label}

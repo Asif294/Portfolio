@@ -12,7 +12,7 @@ export default function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-grid bg-[size:56px_56px]" />
       <div className="pointer-events-none absolute -top-32 left-1/2 h-[520px] w-[520px] -translate-x-1/2 rounded-full bg-accent-500/10 blur-[130px]" />
 
-      <div className="relative mx-auto grid w-full max-w-content flex-1 items-center gap-14 px-6 py-12 lg:grid-cols-[1.15fr_0.85fr] lg:px-8">
+      <div className="relative mx-auto grid w-full max-w-content flex-1 items-center gap-10 px-6 py-12 lg:grid-cols-[1.25fr_0.75fr] lg:gap-16 lg:px-8">
         {/* Copy */}
         <div className="animate-fade-up text-center lg:text-left">
           {profile.available && (
@@ -33,11 +33,11 @@ export default function Hero() {
             {profile.role}
           </p>
 
-          <p className="mt-2 font-mono text-sm text-slate-500">
+          <p className="mt-3 font-mono text-[15px] text-slate-300">
             {profile.title} · {profile.location}
           </p>
 
-          <p className="mx-auto mt-6 max-w-xl text-base leading-relaxed text-slate-400 lg:mx-0">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-slate-200 lg:mx-0">
             {profile.intro}
           </p>
 
@@ -56,7 +56,7 @@ export default function Hero() {
               href={profile.resume}
               download={profile.resumeFileName}
               className="inline-flex items-center gap-2 rounded-full border border-ink-600
-                         px-6 py-3 text-sm font-semibold text-slate-200 transition duration-300
+                         px-6 py-3 text-sm font-semibold text-slate-100 transition duration-300
                          hover:border-accent-400 hover:text-accent-400"
             >
               <FaDownload className="text-xs" />
@@ -74,7 +74,7 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 aria-label={label}
                 title={label}
-                className="text-xl text-slate-500 transition-colors duration-200 hover:text-accent-400"
+                className="text-xl text-slate-400 transition-colors duration-200 hover:text-accent-400"
               >
                 <Icon />
               </a>
@@ -111,10 +111,10 @@ export default function Hero() {
             <div key={stat.label} className="px-4 py-6 text-center">
               <dt className="sr-only">{stat.label}</dt>
               <dd>
-                <span className="block text-2xl font-bold text-accent-400">
+                <span className="block text-3xl font-bold text-accent-400">
                   {stat.value}
                 </span>
-                <span className="mt-1 block text-xs text-slate-500">
+                <span className="mt-1.5 block text-sm text-slate-300">
                   {stat.label}
                 </span>
               </dd>

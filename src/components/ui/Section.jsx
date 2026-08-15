@@ -27,7 +27,7 @@ export default function Section({
             </h2>
             <div className="mt-4 h-1 w-14 rounded-full bg-accent-400" />
             {description && (
-              <p className="mt-6 text-base leading-relaxed text-slate-400">
+              <p className="mt-6 text-lg leading-relaxed text-slate-300">
                 {description}
               </p>
             )}

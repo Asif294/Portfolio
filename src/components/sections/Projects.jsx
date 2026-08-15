@@ -40,7 +40,7 @@ export default function Projects() {
                   {project.subtitle}
                 </p>
 
-                <p className="mt-4 text-sm leading-relaxed text-slate-400">
+                <p className="mt-4 text-[15px] leading-relaxed text-slate-200">
                   {project.overview}
                 </p>
 
@@ -48,7 +48,7 @@ export default function Projects() {
                   {project.points.map((point) => (
                     <li
                       key={point}
-                      className="flex items-start gap-2 text-xs leading-relaxed text-slate-500"
+                      className="flex items-start gap-2 text-sm leading-relaxed text-slate-300"
                     >
                       <span className="mt-0.5 text-accent-400">▹</span>
                       {point}

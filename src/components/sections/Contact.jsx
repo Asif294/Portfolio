@@ -41,10 +41,10 @@ export default function Contact() {
               <span className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-accent-400/10 text-xl text-accent-400">
                 <Icon />
               </span>
-              <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-300">
+              <h3 className="text-sm font-semibold uppercase tracking-wider text-slate-200">
                 {label}
               </h3>
-              <p className="mt-2 break-all text-sm text-slate-400">{value}</p>
+              <p className="mt-2 break-all text-base text-slate-200">{value}</p>
             </Card>
           );
 
@@ -73,7 +73,7 @@ export default function Contact() {
           <h3 className="text-2xl font-bold text-white md:text-3xl">
             Have a project in mind?
           </h3>
-          <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-slate-400">
+          <p className="mx-auto mt-3 max-w-xl text-base leading-relaxed text-slate-300">
             Tell me what you're building and I'll get back to you within a day.
           </p>
 
@@ -91,7 +91,7 @@ export default function Contact() {
               href={profile.resume}
               download={profile.resumeFileName}
               className="inline-flex items-center gap-2 rounded-full border border-ink-600
-                         px-6 py-3 text-sm font-semibold text-slate-200 transition duration-300
+                         px-6 py-3 text-sm font-semibold text-slate-100 transition duration-300
                          hover:border-accent-400 hover:text-accent-400"
             >
               Download CV
@@ -107,7 +107,7 @@ export default function Contact() {
                 rel="noopener noreferrer"
                 aria-label={label}
                 title={label}
-                className="text-lg text-slate-500 transition-colors hover:text-accent-400"
+                className="text-lg text-slate-400 transition-colors hover:text-accent-400"
               >
                 <Icon />
               </a>
