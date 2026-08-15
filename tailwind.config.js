@@ -24,7 +24,7 @@ export default {
         mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "monospace"],
       },
       maxWidth: {
-        content: "80rem",
+        content: "76rem",
       },
       keyframes: {
         "fade-up": {
