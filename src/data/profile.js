@@ -11,10 +11,12 @@ export const profile = {
     "Backend developer working with Django, Django REST Framework and PostgreSQL — " +
     "designing REST APIs, tuning database queries, and shipping secure, well-documented services.",
   objective:
-    "Computer Science and Engineering undergraduate with a completed Diploma in Computer Science " +
-    "and hands-on industry experience in Python backend development. I focus on designing clean " +
-    "RESTful APIs, optimising database access, and securing applications with proper authentication " +
-    "and role-based access control — building a strong foundation in software systems, databases and algorithms.",
+    "Backend developer with one year of industry experience building and maintaining production " +
+    "Python services using Django and Django REST Framework. I focus on RESTful API design, " +
+    "PostgreSQL and Django ORM query optimization, Swagger/OpenAPI documentation, and securing " +
+    "applications with JWT authentication and role-based access control. Currently a Computer " +
+    "Science and Engineering undergraduate, looking for a backend engineering role where I can " +
+    "build scalable, secure and maintainable systems.",
   location: "Dhaka, Bangladesh",
   phone: "+880 1885 430525",
   phoneLink: "8801885430525",

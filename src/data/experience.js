@@ -9,7 +9,7 @@ export const experience = [
       "Building and maintaining backend services for multiple client projects.",
     points: [
       "Design and maintain scalable backend services for multiple client projects using Django and PostgreSQL.",
-      "Improved API response time by optimising database queries and applying Django ORM optimisation techniques.",
+      "Improved API response time by optimizing database queries and applying Django ORM optimization techniques.",
       "Maintain Swagger/OpenAPI documentation to streamline frontend–backend integration.",
       "Implemented JWT-based authentication and role-based access control (RBAC) for secure data handling.",
     ],

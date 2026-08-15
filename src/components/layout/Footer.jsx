@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <a href="#home" className="font-mono text-lg font-bold text-white">
-              asifur<span className="text-accent-400">.dev</span>
+              Asifur<span className="text-accent-400">.dev</span>
             </a>
             <p className="mt-3 max-w-xs text-sm leading-relaxed text-slate-500">
               {profile.tagline} Backend engineering with Django, DRF and PostgreSQL.

@@ -1,0 +1,375 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Md. Asifur Rahman — Backend Developer</title>
+    <style>
+      /* ---------------------------------------------------------------
+         ATS-safe resume stylesheet.
+         Rules followed deliberately:
+           - single column, no tables, no text boxes, no images, no icons
+           - standard system font (Arial), real selectable text
+           - standard "•" bullets, standard section headings
+           - nothing in page headers/footers
+         --------------------------------------------------------------- */
+
+      @page {
+        size: A4;
+        margin: 10mm 12mm;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, "Liberation Sans", Helvetica, sans-serif;
+        font-size: 9.4pt;
+        line-height: 1.235;
+        color: #000;
+      }
+
+      /* ---------- Header ---------- */
+      .name {
+        font-size: 20pt;
+        font-weight: bold;
+        letter-spacing: 0.4px;
+        text-align: center;
+      }
+
+      .title {
+        font-size: 10.4pt;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 2px;
+      }
+
+      .contact {
+        font-size: 9.3pt;
+        text-align: center;
+        margin-top: 3px;
+      }
+
+      a {
+        color: #0563c1;
+        text-decoration: none;
+      }
+
+      .contact .sep {
+        color: #000;
+      }
+
+      /* ---------- Section headings ---------- */
+      h2 {
+        font-size: 10.4pt;
+        font-weight: bold;
+        letter-spacing: 0.6px;
+        text-transform: uppercase;
+        border-bottom: 1.1px solid #000;
+        padding-bottom: 1.5px;
+        margin-top: 6px;
+        margin-bottom: 2.5px;
+      }
+
+      /* ---------- Entries ---------- */
+      .entry {
+        margin-bottom: 4px;
+      }
+
+      .entry:last-child {
+        margin-bottom: 0;
+      }
+
+      /* DOM order is left-to-right, so text extraction stays in reading order. */
+      .row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 10px;
+      }
+
+      .role {
+        font-weight: bold;
+      }
+
+      .date {
+        white-space: nowrap;
+        font-style: italic;
+      }
+
+      .meta {
+        font-style: italic;
+        margin-bottom: 1px;
+      }
+
+      p.summary {
+        text-align: justify;
+      }
+
+      /* ---------- Lists ---------- */
+      ul {
+        list-style: none;
+        margin-top: 1px;
+      }
+
+      /* Hanging indent WITHOUT position:relative/absolute.
+         Positioned boxes are painted in a separate layer, which pushes their
+         text to the end of the PDF content stream — an ATS reading in stream
+         order would then see every bullet orphaned away from its heading. */
+      li {
+        padding-left: 11px;
+        text-indent: -11px;
+        margin-bottom: 1px;
+      }
+
+      li::before {
+        content: "• ";
+      }
+
+      .skills div {
+        margin-bottom: 1.5px;
+      }
+
+      /* Keep an entry from being split across pages. */
+      .entry,
+      li {
+        page-break-inside: avoid;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ============ HEADER ============ -->
+    <header>
+      <div class="name">Md. Asifur Rahman</div>
+      <div class="title">
+        Backend Developer | Python · Django · Django REST Framework · PostgreSQL
+      </div>
+      <div class="contact">
+        Dhaka, Bangladesh <span class="sep">|</span> +880 1885 430525
+        <span class="sep">|</span>
+        <a href="mailto:asifurrahman677294@gmail.com">asifurrahman677294@gmail.com</a>
+      </div>
+      <!--
+        Labelled links keep the header clean. The URLs still ship inside the PDF
+        as /Link annotations, and github.com/Asif294 also stays as plain text on
+        every project line, so the handle remains extractable by an ATS.
+      -->
+      <div class="contact">
+        <a href="https://www.linkedin.com/in/asifur-rahman-435b2a200/">LinkedIn</a>
+        <span class="sep">|</span>
+        <a href="https://github.com/Asif294">GitHub</a>
+        <span class="sep">|</span>
+        <a href="https://asifurrahman-five.vercel.app/">Portfolio</a>
+      </div>
+    </header>
+
+    <!-- ============ SUMMARY ============ -->
+    <h2>Professional Summary</h2>
+    <p class="summary">
+      Backend developer with one year of industry experience building and maintaining
+      production Python services using Django and Django REST Framework. Skilled in
+      RESTful API design, PostgreSQL and Django ORM query optimization, Swagger/OpenAPI
+      documentation, and securing applications with JWT authentication and role-based
+      access control (RBAC). Computer Science and Engineering undergraduate seeking a
+      backend engineering role building scalable, secure and maintainable systems.
+    </p>
+
+    <!-- ============ SKILLS (placed early for keyword matching) ============ -->
+    <h2>Technical Skills</h2>
+    <div class="skills">
+      <div>
+        <b>Programming Languages:</b> Python, C, C++, JavaScript, SQL
+      </div>
+      <div>
+        <b>Backend &amp; Frameworks:</b> Django, Django REST Framework (DRF), FastAPI,
+        WebSockets, RESTful API Design
+      </div>
+      <div>
+        <b>Databases:</b> PostgreSQL, MySQL, SQLite, Django ORM, Query Optimization
+      </div>
+      <div>
+        <b>DevOps &amp; Deployment:</b> Docker, Nginx, CI/CD Pipelines, Linux (Ubuntu)
+      </div>
+      <div>
+        <b>Security &amp; Authentication:</b> JWT, Role-Based Access Control (RBAC)
+      </div>
+      <div>
+        <b>Tools &amp; Practices:</b> Git, GitHub, Git-flow, Postman, Swagger/OpenAPI,
+        Agile, Code Review, PEP 8
+      </div>
+      <div><b>Frontend:</b> React, Tailwind CSS, JavaScript</div>
+    </div>
+
+    <!-- ============ EXPERIENCE ============ -->
+    <h2>Professional Experience</h2>
+
+    <div class="entry">
+      <div class="row">
+        <span class="role">Backend Developer — PsyLab Software Limited</span>
+        <span class="date">Nov 2025 – Present</span>
+      </div>
+      <div class="meta">Remote</div>
+      <ul>
+        <li>
+          Design and maintain scalable backend services for multiple client projects
+          using Django and PostgreSQL.
+        </li>
+        <li>
+          Improved API response time by optimizing database queries and applying Django
+          ORM optimization techniques.
+        </li>
+        <li>
+          Maintain Swagger/OpenAPI documentation to streamline frontend–backend
+          integration.
+        </li>
+        <li>
+          Implemented JWT-based authentication and role-based access control (RBAC) for
+          secure data handling.
+        </li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="row">
+        <span class="role">Python Developer — BdTask Limited</span>
+        <span class="date">Aug 2025 – Oct 2025</span>
+      </div>
+      <div class="meta">Industrial Attachment</div>
+      <ul>
+        <li>
+          Contributed to a large-scale e-commerce engine, developing order management
+          and inventory tracking modules.
+        </li>
+        <li>
+          Assisted in refining database schemas, improving data retrieval speed for
+          high-traffic product catalogs.
+        </li>
+        <li>
+          Followed Git-flow branching and joined peer code reviews to ensure PEP 8
+          compliance and code quality.
+        </li>
+        <li>
+          Worked in an Agile team, contributing to daily stand-ups and sprint planning
+          sessions.
+        </li>
+      </ul>
+    </div>
+
+    <!-- ============ PROJECTS ============ -->
+    <h2>Projects</h2>
+
+    <div class="entry">
+      <div class="role">
+        SmartCare — Hospital Management System (Backend)
+        <a href="https://github.com/Asif294/SmartCare">[Repository]</a>
+      </div>
+      <div class="meta">Django, DRF, SQLite</div>
+      <ul>
+        <li>
+          Developed a healthcare backend managing doctor profiles, patient records and
+          appointment scheduling.
+        </li>
+        <li>
+          Implemented secure patient registration and real-time booking logic to prevent
+          scheduling conflicts.
+        </li>
+        <li>
+          Integrated role-based permissions to protect sensitive medical records and
+          user data.
+        </li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="role">
+        StyleHub — E-commerce Clothing Store (Backend)
+        <a href="https://github.com/Asif294/Stylehub-backend">[Repository]</a>
+      </div>
+      <div class="meta">Django, DRF, SQLite</div>
+      <ul>
+        <li>
+          Built a backend supporting complex product schemas, cart logic and wishlist
+          functionality.
+        </li>
+        <li>
+          Implemented multi-factor filtering (category, size, color, price) using
+          django-filter.
+        </li>
+        <li>
+          Developed a secure checkout workflow and a product review system to improve
+          user engagement.
+        </li>
+      </ul>
+    </div>
+
+    <div class="entry">
+      <div class="role">
+        Banking System — Bank Management Backend
+        <a href="https://github.com/Asif294/Banking_system">[Repository]</a>
+      </div>
+      <div class="meta">Django, DRF, JWT</div>
+      <ul>
+        <li>
+          Implemented account creation, deposits, withdrawals and fund transfers, secured
+          with token-based authentication and detailed transaction audit trails.
+        </li>
+      </ul>
+    </div>
+
+    <!-- ============ EDUCATION ============ -->
+    <h2>Education</h2>
+
+    <div class="entry">
+      <div class="row">
+        <span class="role"
+          >B.Sc. in Computer Science &amp; Engineering — Uttara University</span
+        >
+        <span class="date">May 2026 – Present</span>
+      </div>
+      <div class="meta">
+        Dhaka, Bangladesh — currently enrolled in the first semester (ongoing).
+      </div>
+    </div>
+
+    <div class="entry">
+      <div class="row">
+        <span class="role"
+          >Diploma in Computer Science &amp; Technology — Habiganj Polytechnic
+          Institute</span
+        >
+        <span class="date">Jan 2022 – Jan 2026</span>
+      </div>
+      <div class="meta">Habiganj, Bangladesh — CGPA: 3.48 / 4.00</div>
+    </div>
+
+    <!-- ============ ACHIEVEMENTS ============ -->
+    <h2>Achievements</h2>
+    <ul>
+      <li>
+        Solved 130+ problems on
+        <a href="https://codeforces.com/profile/asifur_rahman677">Codeforces</a> and 40+
+        problems on <a href="https://leetcode.com/u/Asif294/">LeetCode</a>, strengthening
+        problem-solving and algorithmic skills.
+      </li>
+      <li>
+        Completed Diploma in Computer Science &amp; Technology with a CGPA of 3.48/4.00.
+      </li>
+    </ul>
+
+    <!-- ============ ADDITIONAL ============ -->
+    <h2>Additional Information</h2>
+    <div class="skills">
+      <div>
+        <b>Interpersonal Skills:</b> Problem Solving, Time Management, Team Work &amp;
+        Collaboration, Technical Documentation
+      </div>
+      <div>
+        <b>Languages:</b> Bangla (Native), English (Intermediate – Professional Working
+        Proficiency)
+      </div>
+    </div>
+  </body>
+</html>
